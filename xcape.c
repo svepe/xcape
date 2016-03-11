@@ -95,7 +95,7 @@ int main (int argc, char **argv)
 
     int dummy, ch;
 
-    static char default_mapping[] = "Control_L=Escape";
+    static char default_mapping[] = "#66=Escape";
     char *mapping = default_mapping;
 
     XRecordRange *rec_range = XRecordAllocRange();
@@ -414,7 +414,7 @@ void intercept (XPointer user_data, XRecordInterceptData *data)
     }
 
 exit:
-    XUnlockDisplay (self->ctrl_conn); 
+    XUnlockDisplay (self->ctrl_conn);
     XRecordFreeData (data);
 }
 
